@@ -45,9 +45,9 @@ func _process(delta: float) -> void:
 		else:
 			power = max(0.0, power - 2.0 * delta)
 
-		var angle_difference := wrapf(_last_frame_rotation - global_rotation, -PI, PI)
+		var _angle_difference := wrapf(_last_frame_rotation - global_rotation, -PI, PI)
 		_last_frame_rotation = global_rotation
-		_angle_difference_smoothed = lerp_angle(_angle_difference_smoothed, angle_difference, 8.0 * delta)
+		_angle_difference_smoothed = lerp_angle(_angle_difference_smoothed, _angle_difference, 8.0 * delta)
 		curl = _angle_difference_smoothed * 8.0
 
 	if _do_redraw:
