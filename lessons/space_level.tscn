@@ -21,4 +21,5 @@ script = ExtResource("2_4rc43")
 [node name="BgMusic" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(2030, 936)
 stream = ExtResource("5_dru4e")
+volume_db = -10.0
 autoplay = true

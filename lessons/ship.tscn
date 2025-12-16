@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://dmv50krf4bo5r"]
+[gd_scene load_steps=10 format=3 uid="uid://dmv50krf4bo5r"]
 
 [ext_resource type="Texture2D" uid="uid://bniyrxn3r2v8h" path="res://assets/ship.png" id="3_pdppw"]
 [ext_resource type="Texture2D" uid="uid://d0bh8am2qd005" path="res://assets/gem_icon.png" id="4_5xifn"]
 [ext_resource type="AudioStream" uid="uid://c8edb8rt4in5t" path="res://assets/audio/Thruster.ogg" id="5_h3paj"]
 [ext_resource type="PackedScene" uid="uid://dgf54k70yiiff" path="res://assets/ship_visual_effects/main_thruster/main_thruster.tscn" id="5_q7c3l"]
 [ext_resource type="PackedScene" uid="uid://bklom8bhpxg4h" path="res://assets/ship_visual_effects/side_thruster/side_thruster.tscn" id="6_1updt"]
+[ext_resource type="AudioStream" uid="uid://c41uc4kmw0pfj" path="res://assets/audio/PowerupSoundPlayer.ogg" id="6_2s445"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5xifn"]
 radius = 47.010635
@@ -75,7 +76,12 @@ label_settings = SubResource("LabelSettings_5xifn")
 
 [node name="ThrusterSoundPlayer" type="AudioStreamPlayer" parent="." groups=["player"]]
 stream = ExtResource("5_h3paj")
+volume_db = -10.0
 
 [node name="Thruster" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(342, 68)
 stream = ExtResource("5_h3paj")
+
+[node name="PowerupSoundPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_2s445")
+volume_db = 5.0

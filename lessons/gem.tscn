@@ -18,7 +18,8 @@ texture = ExtResource("1_lgy4a")
 position = Vector2(-1, -1)
 shape = SubResource("CircleShape2D_nak5q")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="GemPickupSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_ty4yi")
+volume_db = -10.0
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
